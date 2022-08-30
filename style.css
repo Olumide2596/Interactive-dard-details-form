@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 :root {
-	--active-input-order: Linear-gradient(
-		hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
-	);
 	--error-red: hsl(0, 100%, 66%);
 	--White: hsl(0, 0%, 100%);
 	--light-grayish-violet: hsl(270, 3%, 87%);
@@ -28,6 +25,11 @@ body {
 	background-position: left;
 	background-repeat: no-repeat;
 	background-size: contain;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 main > *,
@@ -38,7 +40,11 @@ footer > * {
 }
 .container {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	gap: 80px;
+	transform: scale(0.85);
 }
 
 /* Card iMAGE section */
@@ -48,10 +54,10 @@ footer > * {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 230px;
-	width: 440px;
+	height: 220px;
+	max-width: 400px;
 	border-radius: 10px;
-	padding: 30px 40px;
+	padding: 20px 30px;
 	color: var(--White);
 }
 .card-front {
@@ -64,8 +70,8 @@ footer > * {
 .card-number {
 	width: 100%;
 	font-size: 24px;
-	letter-spacing: 2px;
-	word-spacing: 18px;
+	letter-spacing: 1px;
+	word-spacing: 12px;
 	margin-bottom: 20px;
 }
 .card-info {
@@ -75,19 +81,115 @@ footer > * {
 
 .card-back {
 	background-image: url(images/bg-card-back.png);
-	padding: 100px;
+	padding: 98px;
 	margin-left: 100px;
 }
 .card-cvc {
-	margin-left: 250px;
+	margin-left: 215px;
 }
 
 /* FORM PART */
+.form {
+	width: 100%;
+	padding: 20px 50px;
+}
+form {
+	width: 80%;
+}
+form > * {
+	margin-bottom: 30px;
+}
+form div {
+	display: flex;
+	flex-direction: column;
+}
 
+.date-date,
+.date-details {
+	flex-direction: row;
+	gap: 10px;
+}
+label {
+	text-transform: uppercase;
+	color: var(--very-dark-violet);
+	font-size: 14px;
+	margin-bottom: 10px;
+	letter-spacing: 1.2px;
+}
+div + label {
+	margin-top: 20px;
+}
+input {
+	border: 1px solid var(--light-grayish-violet);
+	border-radius: 10px;
+	padding: 15px 20px;
+	font: 18px;
+	font-weight: bold;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+.date-date div {
+	width: 50%;
+}
+.date {
+	width: 50%;
+}
+.cvc {
+	width: 50%;
+	margin-left: 15px;
+}
+
+input:focus {
+	border-color: Linear-gradient(hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+}
+input::placeholder {
+	color: var(--dark-grayish-violet);
+}
+button {
+	font-family: inherit;
+	width: 100%;
+	padding: 15px;
+	color: var(--White);
+	background-color: var(--very-dark-violet);
+	border-radius: 10px;
+	font-size: 18px;
+	border: none;
+}
+input:hover,
+button:hover {
+	cursor: pointer;
+}
+/* COMPLETED */
+.completed {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-width: 400px;
+	gap: 30px;
+}
+.completed p {
+	color: var(--dark-grayish-violet);
+}
+.completed h2 {
+	letter-spacing: 2px;
+	color: var(--very-dark-violet);
+	font-weight: 500;
+}
 .attribution {
 	font-size: 11px;
 	text-align: center;
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+.hidden {
+	display: none;
 }

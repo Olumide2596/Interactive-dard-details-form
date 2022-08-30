@@ -44,11 +44,10 @@
 							<label for="name">Cardholder Name</label>
 							<input
 								type="text"
-								required
-								placeholder="e.g. Jane
-              Appleseed"
+								placeholder="e.g. Jane Appleseed"
 								id="name"
 								name="name"
+								required
 							/>
 						</div>
 						<div>
@@ -64,20 +63,26 @@
 						<div class="date-details">
 							<div class="date">
 								<label for="">Exp. Date (MM/YY)</label>
-								<input
-									type="number"
-									name="month"
-									id="month"
-									required
-									placeholder="MM"
-								/>
-								<input
-									type="number"
-									name="year"
-									id="year"
-									required
-									placeholder="YY"
-								/>
+								<div class="date-date">
+									<div class="month">
+										<input
+											type="number"
+											name="month"
+											id="month"
+											required
+											placeholder="MM"
+										/>
+									</div>
+									<div class="year">
+										<input
+											type="number"
+											name="year"
+											id="year"
+											required
+											placeholder="YY"
+										/>
+									</div>
+								</div>
 							</div>
 
 							<div class="cvc">
@@ -91,7 +96,7 @@
 								/>
 							</div>
 						</div>
-						<button type="submit">Confirm</button>
+						<button type="submit" class="submit">Confirm</button>
 					</form>
 					<div class="completed hidden">
 						<img src="images/icon-complete.svg" alt="" />
