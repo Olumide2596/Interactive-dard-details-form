@@ -13,11 +13,14 @@ confirmBtn.addEventListener('click', function () {
 				'afterend',
 				`<p style='color:red; font-size:12px;margin-top:5px;'>Can't be blank</p>`
 			);
-		} else {
-			form.classList.add('hidden');
-			completed.classList.remove('hidden');
-			input.nextSibling.textContent = '';
 		}
+		inputFileds.forEach(input => {
+			if (input.value.trim() === '') return;
+			// form.classList.add('hidden');
+			// completed.classList.remove('hidden');
+			// input.nextSibling.textContent = '';
+		});
+
 		//
 	});
 });
