@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+:root {
+	--active-input-order: Linear-gradient(
+		hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+	);
+	--error-red: hsl(0, 100%, 66%);
+	--White: hsl(0, 0%, 100%);
+	--light-grayish-violet: hsl(270, 3%, 87%);
+	--dark-grayish-violet: hsl(279, 6%, 55%);
+	--very-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	overflow-x: 0;
+}
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+}
+body {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 18px;
+	background-image: url(images/bg-main-desktop.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+main > *,
+footer > * {
+	max-width: 86em;
+	padding: 2em;
+	margin: 0 auto;
+}
+.container {
+	display: flex;
+	justify-content: space-around;
+}
+
+/* Card iMAGE section */
+
+.card-back,
+.card-front {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 230px;
+	width: 440px;
+	border-radius: 10px;
+	padding: 30px 40px;
+	color: var(--White);
+}
+.card-front {
+	background-image: url(images/bg-card-front.png);
+	margin-bottom: 30px;
+}
+.card-logo {
+	margin-bottom: 50px;
+}
+.card-number {
+	width: 100%;
+	font-size: 24px;
+	letter-spacing: 2px;
+	word-spacing: 18px;
+	margin-bottom: 20px;
+}
+.card-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-back {
+	background-image: url(images/bg-card-back.png);
+	padding: 100px;
+	margin-left: 100px;
+}
+.card-cvc {
+	margin-left: 250px;
+}
+
+/* FORM PART */
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
