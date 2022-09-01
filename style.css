@@ -161,6 +161,9 @@ button {
 	font-size: 18px;
 	border: none;
 }
+button:hover {
+	background-color: hsl(278, 68%, 31%);
+}
 input:hover,
 button:hover {
 	cursor: pointer;
