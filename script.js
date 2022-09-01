@@ -57,10 +57,11 @@ const cardCreation = function () {
 confirmBtn.addEventListener('click', function (e) {
 	e.preventDefault();
 	validate();
-	cardCreation();
+
 	if ([...inputFileds].every(input => input.value.trim() !== '') && !check) {
 		form.classList.add('hidden');
 		completed.classList.remove('hidden');
+		cardCreation();
 	} else cardNumberFormat();
 });
 console.log(value, typeof value);
