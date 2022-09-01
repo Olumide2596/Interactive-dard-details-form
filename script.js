@@ -28,6 +28,17 @@ const validate = function () {
 		}
 	});
 };
+const value = inputNumber.value;
+const check = [...value].map(v => Number(v)).includes(NaN);
+const cardNumberFormat = function () {
+	inputNumber.nextSibling.remove();
+	check
+		? inputNumber.insertAdjacentHTML(
+				'afterend',
+				`<p style='color:red; font-size:12px;margin-top:5px;'>Wrong format, numbers only</p>`
+		  )
+		: console.log(check);
+};
 
 const cardCreation = function () {
 	inputNumber.value !== ''
@@ -47,9 +58,9 @@ confirmBtn.addEventListener('click', function (e) {
 	e.preventDefault();
 	validate();
 	cardCreation();
-
-	if ([...inputFileds].every(input => input.value.trim() !== '')) {
+	if ([...inputFileds].every(input => input.value.trim() !== '') && !check) {
 		form.classList.add('hidden');
 		completed.classList.remove('hidden');
-	}
+	} else cardNumberFormat();
 });
+console.log(value, typeof value);

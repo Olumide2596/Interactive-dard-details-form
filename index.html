@@ -55,6 +55,7 @@
 							<input
 								type="text"
 								required
+								pattern="[0-9]{13,16}"
 								placeholder="e.g. 1234 5678 9123 0000"
 								id="number"
 								name="number"
@@ -71,6 +72,7 @@
 											id="month"
 											max="12"
 											min="0"
+											maxlength="2"
 											required
 											placeholder="MM"
 										/>
@@ -79,6 +81,9 @@
 										<input
 											type="number"
 											name="year"
+											max="99"
+											min="0"
+											maxlength="2"
 											id="year"
 											required
 											placeholder="YY"
@@ -94,6 +99,9 @@
 									required
 									name="cvc"
 									id="cvc"
+									max="999"
+									min="001"
+									maxlength="3"
 									placeholder="e.g. 123"
 								/>
 							</div>
