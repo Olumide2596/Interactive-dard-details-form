@@ -32,12 +32,11 @@ const value = inputNumber.value;
 const check = [...value].map(v => Number(v)).includes(NaN);
 const cardNumberFormat = function () {
 	inputNumber.nextSibling.remove();
-	check
-		? inputNumber.insertAdjacentHTML(
-				'afterend',
-				`<p style='color:red; font-size:12px;margin-top:5px;'>Wrong format, numbers only</p>`
-		  )
-		: console.log(check);
+	check &&
+		inputNumber.insertAdjacentHTML(
+			'afterend',
+			`<p style='color:red; font-size:12px;margin-top:5px;'>Wrong format, numbers only</p>`
+		);
 };
 
 const cardCreation = function () {
